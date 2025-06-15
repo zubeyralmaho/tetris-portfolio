@@ -39,8 +39,8 @@ const ContactCard = () => {
         </svg>
       ),
       label: "GitHub",
-      value: "/zubeyr-almaho",
-      link: "https://github.com/zubeyr-almaho"
+      value: "/zubeyralmaho",
+      link: "https://github.com/zubeyralmaho"
     }
   ];
 

@@ -52,17 +52,17 @@ const projects: Project[] = [
     images: [
       "/assets/projects-images/pinguni-projects.png"
     ],
-    link: "https://github.com/zubeyr-almaho/pinguni",
+    link: "https://github.com/zubeyralmaho/pinguni",
     technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Node.js"]
   },
   {
     id: 3,
     title: "Iztech Chess",
-    description: "A modern chess application built for Izmir Institute of Technology students. Features include online multiplayer, game analysis, and tournament management.",
+    description: "A modern chess website built for Izmir Institute of Technology students. Features include activity manager, FAQ, and tournament management.",
     images: [
       "/assets/projects-images/iztechchess-projects.png"
     ],
-    link: "https://github.com/zubeyr-almaho/iztechchess",
+    link: "https://github.com/zubeyralmaho/iztechchess",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"]
   },
   {
@@ -72,7 +72,7 @@ const projects: Project[] = [
     images: [
       "/assets/projects-images/topluluklar-projects.png"
     ],
-    link: "https://github.com/zubeyr-almaho/topluluklar",
+    link: "https://github.com/zubeyralmaho/topluluklar",
     technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"]
   },
   {
@@ -82,7 +82,7 @@ const projects: Project[] = [
     images: [
       "/assets/projects-images/tetris-portfolio.png"
     ],
-    link: "https://github.com/zubeyr-almaho/tetris-portfolio",
+    link: "https://github.com/zubeyralmaho/tetris-portfolio",
     technologies: ["Next.js", "TypeScript", "Canvas API", "Tailwind CSS", "React Hooks"]
   }
 ];
