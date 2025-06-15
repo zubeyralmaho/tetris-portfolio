@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+:root {
+  --background: #141414;
+  --foreground: #ededed;
+}
+
+/* Tetris Background Styles */
+html, body {
+  background: #141414;
+  overflow: hidden;
+  height: 100%;
+  color: var(--foreground);
+  font-family: var(--font-retro-terminal), var(--font-nostalgic-mono), monospace;
+  position: fixed;
+  width: 100%;
+}
+
+/* Prevent any scrolling */
+* {
+  scroll-behavior: auto !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Custom Animations */
+@keyframes tetrisFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes tetrisPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes tetrisFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes cardSlideOut {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
+.tetris-card {
+  animation: cardSlideIn 1.2s ease-out;
+}
+
+/* Enhanced hover effects */
+.tetris-card:hover {
+  transform: translateY(-8px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Tetris block glow effects */
+.tetris-glow {
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Enhanced glassmorphism effects */
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gaming Font Utilities */
+.font-gaming {
+  font-family: var(--font-retro-terminal), monospace;
+  font-size: 1.26em;
+}
+
+.font-gaming-pixel {
+  font-family: var(--font-retro-terminal), monospace;
+  letter-spacing: 0.05em;
+  font-size: 1.32em;
+}
+
+.font-gaming-modern {
+  font-family: var(--font-code-nostalgic), var(--font-nostalgic-mono), monospace;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.font-nostalgic {
+  font-family: var(--font-retro-terminal), monospace;
+  font-size: 1.2em;
+}
+
+/* Override default font family for all elements with balanced sizing */
+* {
+  font-family: var(--font-retro-terminal), var(--font-nostalgic-mono), monospace !important;
+  font-size: inherit;
+}
+
+/* Special nostalgic styles for headings with moderate sizes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-retro-terminal), monospace !important;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h1 { font-size: 3rem !important; }
+h2 { font-size: 2.4rem !important; }
+h3 { font-size: 1.92rem !important; }
+h4 { font-size: 1.56rem !important; }
+h5 { font-size: 1.32rem !important; }
+h6 { font-size: 1.2rem !important; }
+
+/* Retro terminal text styling with enhanced readability */
+.text-pixel {
+  font-family: var(--font-retro-terminal), monospace;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 5px currentColor;
+  font-size: 1.26em;
+}
+
+/* Nostalgic code-style text */
+.text-code {
+  font-family: var(--font-code-nostalgic), var(--font-nostalgic-mono), monospace;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+}
+
+/* Base text size improvements - enhanced readability */
+p, span, div, a, button {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Tailwind classes with enhanced sizes */
+.text-xs { font-size: 1.02rem !important; }
+.text-sm { font-size: 1.14rem !important; }
+.text-base { font-size: 1.2rem !important; }
+.text-lg { font-size: 1.35rem !important; }
+.text-xl { font-size: 1.5rem !important; }
+.text-2xl { font-size: 2.1rem !important; }
+.text-3xl { font-size: 2.5rem !important; }
+.text-4xl { font-size: 3rem !important; }
+
+/* Enhanced global font size boost */
+body {
+  font-size: 20px !important;
+}
+
+/* Enhanced button and form element sizes */
+button, input, textarea, select {
+  font-size: 1.3rem !important;
+  padding: 0.5rem 1rem !important;
+}
