@@ -35,6 +35,52 @@ interface Volunteer {
 const projects: Project[] = [
   {
     id: 1,
+    title: "İmarAnaliz - Digital Zoning Analysis Platform",
+    description: "E-Ekspertiz (digital appraisal) platform that digitizes Turkey's complex zoning regulations. Delivers verified, official zoning analysis reports for land parcels in İzmir, Aydın, and Muğla — instantly, online, 24/7. Users enter parcel details, pay securely via PayTR, and receive structured reports within seconds. Features a personal dashboard for archived reports and PDF downloads. Eliminates weeks of bureaucratic processes, replacing in-person municipality visits with a single digital transaction.",
+    images: [
+      "/assets/projects-images/imaranaliz-1.png",
+      "/assets/projects-images/imaranaliz-2.png",
+      "/assets/projects-images/imaranaliz-3.png",
+      "/assets/projects-images/imaranaliz-4.png",
+      "/assets/projects-images/imaranaliz-5.png",
+      "/assets/projects-images/imaranaliz-6.png"
+    ],
+    link: "https://imaranaliz.com",
+    technologies: ["Next.js", "React", "PayTR", "REST APIs", "SEO"]
+  },
+  {
+    id: 2,
+    title: "SÜR - On-Demand Safe Driver App",
+    description: "Location-based marketplace app connecting users with verified private drivers and tow trucks — so users get home safely in their own car. A verified driver comes to you, drives your car to your destination with you inside. Features real-time driver-user matching, live location tracking, full insurance coverage, and a strict driver vetting process (criminal background check, psychotechnical evaluation, driving test). Closed Alpha live on Google Play Store. Pilot region: İzmir — Urla, Çeşme, Alaçatı corridor.",
+    images: [
+      "/assets/projects-images/sur-1.png",
+      "/assets/projects-images/sur-2.png",
+      "/assets/projects-images/sur-3.png",
+      "/assets/projects-images/sur-4.png",
+      "/assets/projects-images/sur-5.png",
+      "/assets/projects-images/sur-6.png"
+    ],
+    link: "",
+    technologies: ["React Native", "Expo", "Real-time Location", "Google Play Store"]
+  },
+  {
+    id: 3,
+    title: "spatiad - Real-Time Spatial Dispatch Engine",
+    description: "Production-grade open-source spatial dispatch engine that matches drivers (or any mobile agents) to jobs in real-time using Uber's H3 hexagonal geospatial indexing — shipped as a single Rust binary with zero external dependencies. No database, no Redis, no message broker. Features WebSocket-based driver sessions, HMAC-SHA256 signed webhooks with exponential backoff, cursor-paginated event timeline, and multi-language SDK support (TypeScript, Go, Java, Kotlin, Python, Swift). 64 commits, MIT licensed.",
+    images: [],
+    link: "https://github.com/zubeyralmaho/spatiad",
+    technologies: ["Rust", "TypeScript", "WebSocket", "Uber H3", "Docker", "Kubernetes"]
+  },
+  {
+    id: 4,
+    title: "nomos - JSON API Schema Drift Auto-Healer",
+    description: "Transparent reverse proxy that auto-heals JSON API schema drift at runtime — renamed fields, type changes, restructured objects — with no code changes or redeployments. Uses a 5-algorithm NLP ensemble (Jaro-Winkler, Levenshtein, TF-IDF, synonym dictionary, trigram embeddings) for drift detection. Features eBPF/XDP kernel-level packet classification, SIMD-accelerated JSON parsing (AVX2/SSE2/NEON), zero-copy hot path, and WASM healer hot-swap. Benchmarks: p99 latency 0.22ms, throughput 5,146 RPS. 46 commits, MIT licensed.",
+    images: [],
+    link: "https://github.com/zubeyralmaho/nomos",
+    technologies: ["Rust", "eBPF/XDP", "WASM", "NLP", "SIMD"]
+  },
+  {
+    id: 5,
     title: "Iztech Music Platform with Smart Lock Integration",
     description: "An innovative studio platform with integrated IoT smart lock system. I personally procured Yale Smart Locks and Bridge modules for the studio, developing an end-to-end 'appointment-based PIN generation system' with electronic integration using React.js. Automated PIN generation, electronic lock control, and time-based verification processes through Cloud Functions, automating all routine tasks and replaced for 8 key attendent. Successfully presented the project demo to Rector Yusuf Baran.",
     images: [
@@ -46,7 +92,7 @@ const projects: Project[] = [
     technologies: ["React.js", "Cloud Functions", "Seam API", "IoT Integration", "PIN Generation System"]
   },
   {
-    id: 2,
+    id: 6,
     title: "PingUni",
     description: "\"Connect to campus\" - A comprehensive React Native mobile application that digitizes the entire campus environment. Bringing all campus services, activities, and community features into one unified digital platform.",
     images: [
@@ -56,7 +102,7 @@ const projects: Project[] = [
     technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Node.js"]
   },
   {
-    id: 3,
+    id: 7,
     title: "Iztech Chess",
     description: "A modern chess website built for Izmir Institute of Technology students. Features include activity manager, FAQ, and tournament management.",
     images: [
@@ -66,7 +112,7 @@ const projects: Project[] = [
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"]
   },
   {
-    id: 4,
+    id: 8,
     title: "Topluluklar Platform",
     description: "A community management platform for university clubs and organizations. Features include event management, member tracking, and communication tools.",
     images: [
@@ -76,7 +122,7 @@ const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"]
   },
   {
-    id: 5,
+    id: 9,
     title: "Tetris Portfolio Website",
     description: "A creative and animated portfolio website featuring falling Tetris blocks background. Built with modern web technologies for an innovative and interactive user experience. Features glassmorphism effects, smooth animations, and Tetris-style navigation.",
     images: [
